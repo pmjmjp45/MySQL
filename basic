@@ -1,0 +1,18 @@
+show databases; 
+create database kopo14;
+use kopo14;
+show tables;
+
+#create
+create table examtable (name varchar(20), studentid int not null primary key, kor int, eng int, mat int);
+#delete table
+drop table examtable;
+delete from examtable;
+#read
+select * from examtable;
+#update
+insert into examtable (name, studentid, kor, eng, mat) values ('Sana', 209901, 100, 100, 100);
+insert into examtable (name, studentid, kor, eng, mat) values ('Sana', 209901, rand() * 100, rand() * 100, rand() * 100);
+update examtable set kor = 90, eng = 90, mat = 90 where studentid = 209901;
+alter table examtable sci int;
+alter table examtable drop sci int;
